@@ -1,7 +1,7 @@
 'use strict';
 
 var User = require('./user.model');
-var Organization = require('../organization/organization.controller');
+var Organization = require('../organization/organization.model');
 var passport = require('passport');
 var config = require('../../config/environment');
 var jwt = require('jsonwebtoken');
@@ -35,36 +35,71 @@ exports.create = function (req, res, next) {
   //3. Creating a user and associating an existing organization.
   //Comment 1: Consider a second version who creater an organization based in the organization controller and not in
   //the organization object.
-	
+  //Comment 2: Consider the invitation process while adding new users.
+
   //Case 1
   if(!req.body.organizationName&&!req.body._organization) {
     var organization = new Organization({ name : generateCompanyNameBasedOnUserName(req.body.name)});
-	organization.save(function(saveOrganizationError){
-		if(saveOrganizationError) return handleError(res, saveOrganizationError);
-	
-	
-	});
-	
+    organization.save(function(saveOrganizationError){
+      if(saveOrganizationError) return handleError(res, saveOrganizationError);
+      //If we created the organization, we are ready to create the user.
+      req.body._organization = organization._id;
+      var newUser = new User(req.body);
+      newUser.provider = 'local';
+      newUser.role = 'user';
+      newUser.save(function(saveUserError, user) {
+        if (saveUserError) {
+          //Given an error saving the user, we have to delete the organization we just created.
+          Organization.findByIdAndRemove( organization._id, function(removeOrganizationError){
+            if(removeOrganizationError) return handleError(res, removeOrganizationError);
+            return validationError(res, saveUserError);
+          });
+        } else {
+          var token = jwt.sign({_id: user._id }, config.secrets.session, { expiresInMinutes: 60*5 });
+          res.json({ token: token });
+        }
+      });
+    });
   } else
   if(req.body.organizationName&&!req.body._organization) {
-	  
+    var organization = new Organization({ name : req.body.organizationName});
+    organization.save(function(saveOrganizationError){
+      if(saveOrganizationError) return handleError(res, saveOrganizationError);
+      //If we created the organization, we are ready to create the user.
+      req.body._organization = organization._id;
+      var newUser = new User(req.body);
+      newUser.provider = 'local';
+      newUser.role = 'user';
+      newUser.save(function(saveUserError, user) {
+        if (saveUserError) {
+          //Given an error saving the user, we have to delete the organization we just created.
+          Organization.findByIdAndRemove( organization._id, function(removeOrganizationError){
+            if(removeOrganizationError) return handleError(res, removeOrganizationError);
+            return validationError(res, saveUserError);
+          });
+        } else {
+          var token = jwt.sign({_id: user._id }, config.secrets.session, { expiresInMinutes: 60*5 });
+          res.json({ token: token });
+        }
+      });
+    });
   } else
-  if(req.body._organization) {
-  
+  if(req.body._organization) {//TODO, generate an efficient way to create users by themselves, based on invitations
+    var newUser = new User(req.body);
+    newUser.provider = 'local';
+    newUser.role = 'user';
+    newUser.save(function(err, user) {
+    if (err) return validationError(res, err);
+    var token = jwt.sign({_id: user._id }, config.secrets.session, { expiresInMinutes: 60*5 });
+    res.json({ token: token });
+  });
   }
   
   
   
   
   
-  var newUser = new User(req.body);
-  newUser.provider = 'local';
-  newUser.role = 'user';
-  newUser.save(function(err, user) {
-    if (err) return validationError(res, err);
-    var token = jwt.sign({_id: user._id }, config.secrets.session, { expiresInMinutes: 60*5 });
-    res.json({ token: token });
-  });
+
 };
 
 /**
@@ -141,6 +176,6 @@ function handleError(res, err) {
 }
 
 function generateCompanyNameBasedOnUserName(ownersName, lang){
-	var template = 'Empresa de OWNERS_NAME';
-	return template.replace('OWNERS_NAME', ownersName)
+  var template = 'Empresa de OWNERS_NAME';
+  return template.replace('OWNERS_NAME', ownersName)
 }

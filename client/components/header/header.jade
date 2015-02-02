@@ -1,0 +1,239 @@
+html
+  body
+    header.clearfix
+      // Branding
+      .branding(class='{{main.settings.brandingColor}}')
+        a.brand(ui-sref='app.dashboard')
+          span
+            strong MIN
+            | OVATE
+      // Branding end
+      // Left-side navigation
+      ul.nav-left.pull-left.list-unstyled.list-inline
+        li.sidebar-collapse.divided-right
+          a(href='javascript:;', collapse-sidebar='')
+            fa(name='outdent')
+        li.dropdown.divided-right.settings(on-toggle='toggled(open)')
+          a.dropdown-toggle(href='')
+            fa(name='cog')
+          ul.dropdown-menu.with-arrow.animated.littleFadeInUp
+            li
+              ul.color-schemes.list-inline
+                li.title Header Color:
+                li
+                  a.scheme-drank(href='javascript:;', ng-click="main.settings.navbarHeaderColor='scheme-default'; $event.stopPropagation()")
+                li
+                  a.scheme-black(href='javascript:;', ng-click="main.settings.navbarHeaderColor='scheme-black'; $event.stopPropagation()")
+                li
+                  a.scheme-greensea(href='javascript:;', ng-click="main.settings.navbarHeaderColor='scheme-greensea'; $event.stopPropagation()")
+                li
+                  a.scheme-cyan(href='javascript:;', ng-click="main.settings.navbarHeaderColor='scheme-cyan'; $event.stopPropagation()")
+                li
+                  a.scheme-lightred(href='javascript:;', ng-click="main.settings.navbarHeaderColor='scheme-lightred'; $event.stopPropagation()")
+                li
+                  a.scheme-light(href='javascript:;', ng-click="main.settings.navbarHeaderColor='scheme-light'; $event.stopPropagation()")
+                li.title Branding Color:
+                li
+                  a.scheme-drank(href='javascript:;', ng-click="main.settings.brandingColor='scheme-default'; $event.stopPropagation()")
+                li
+                  a.scheme-black(href='javascript:;', ng-click="main.settings.brandingColor='scheme-black'; $event.stopPropagation()")
+                li
+                  a.scheme-greensea(href='javascript:;', ng-click="main.settings.brandingColor='scheme-greensea'; $event.stopPropagation()")
+                li
+                  a.scheme-cyan(href='javascript:;', ng-click="main.settings.brandingColor='scheme-cyan'; $event.stopPropagation()")
+                li
+                  a.scheme-lightred(href='javascript:;', ng-click="main.settings.brandingColor='scheme-lightred'; $event.stopPropagation()")
+                li
+                  a.scheme-light(href='javascript:;', ng-click="main.settings.brandingColor='scheme-light'; $event.stopPropagation()")
+                li.title Sidebar Color:
+                li
+                  a.scheme-drank(href='javascript:;', ng-click="main.settings.sidebarColor='scheme-default'; $event.stopPropagation()")
+                li
+                  a.scheme-black(href='javascript:;', ng-click="main.settings.sidebarColor='scheme-black'; $event.stopPropagation()")
+                li
+                  a.scheme-greensea(href='javascript:;', ng-click="main.settings.sidebarColor='scheme-greensea'; $event.stopPropagation()")
+                li
+                  a.scheme-cyan(href='javascript:;', ng-click="main.settings.sidebarColor='scheme-cyan'; $event.stopPropagation()")
+                li
+                  a.scheme-lightred(href='javascript:;', ng-click="main.settings.sidebarColor='scheme-lightred'; $event.stopPropagation()")
+                li
+                  a.scheme-light(href='javascript:;', ng-click="main.settings.sidebarColor='scheme-light'; $event.stopPropagation()")
+                li.title Active Color:
+                li
+                  a.scheme-drank(href='javascript:;', ng-click="main.settings.activeColor='drank-scheme-color'; $event.stopPropagation()")
+                li
+                  a.scheme-black(href='javascript:;', ng-click="main.settings.activeColor='black-scheme-color'; $event.stopPropagation()")
+                li
+                  a.scheme-greensea(href='javascript:;', ng-click="main.settings.activeColor='default-scheme-color'; $event.stopPropagation()")
+                li
+                  a.scheme-cyan(href='javascript:;', ng-click="main.settings.activeColor='cyan-scheme-color'; $event.stopPropagation()")
+                li
+                  a.scheme-lightred(href='javascript:;', ng-click="main.settings.activeColor='lightred-scheme-color'; $event.stopPropagation()")
+                li
+                  a.scheme-light(href='javascript:;', ng-click="main.settings.activeColor='light-scheme-color'; $event.stopPropagation()")
+            li
+              .form-group.ng-scope
+                .row
+                  label.col-xs-8.control-label Fixed header
+                  .col-xs-4.control-label
+                    .onoffswitch.lightred.small(ng-click='$event.stopPropagation()')
+                      input#fixed-header.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='', ng-model='main.settings.headerFixed')
+                      label.onoffswitch-label(for='fixed-header')
+                        span.onoffswitch-inner
+                        span.onoffswitch-switch
+            li
+              .form-group.ng-scope
+                .row
+                  label.col-xs-8.control-label Fixed aside
+                  .col-xs-4.control-label
+                    .onoffswitch.lightred.small(ng-click='$event.stopPropagation()')
+                      input#fixed-aside.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='', ng-model='main.settings.asideFixed')
+                      label.onoffswitch-label(for='fixed-aside')
+                        span.onoffswitch-inner
+                        span.onoffswitch-switch
+      // Left-side navigation end
+      // Search
+      #main-search.search
+        input.form-control.underline-input(type='text', placeholder='Search...')
+      // Search end
+      // Right-side navigation
+      ul.nav-right.pull-right.list-inline
+        li.dropdown.users(on-toggle='toggled(open)')
+          a.dropdown-toggle(href='')
+            fa(name='user')
+            span.badge.bg-lightred 2
+          .dropdown-menu.pull-right.with-arrow.panel.panel-default.animated.littleFadeInUp
+            .panel-heading
+              | You have 
+              strong 2
+              |  requests
+            ul.list-group
+              li.list-group-item
+                a.media(href='javascript:;')
+                  span.pull-left.media-object.thumb.thumb-sm
+                    img.img-circle(src='images/arnold-avatar.jpg', alt='')
+                  .media-body
+                    span.block Arnold sent you a request
+                    small.text-muted 15 minutes ago
+              li.list-group-item
+                a.media(href='javascript:;')
+                  span.pull-left.media-object.thumb.thumb-sm
+                    img.img-circle(src='images/george-avatar.jpg', alt='')
+                  .media-body
+                    span.block George sent you a request
+                    small.text-muted 5 hours ago
+            .panel-footer
+              a(href='javascript:;')
+                | Show all requests 
+                fa.pull-right(name='angle-right')
+        li.dropdown.messages(on-toggle='toggled(open)')
+          a.dropdown-toggle(href='')
+            fa(name='envelope')
+            span.badge.bg-lightred 4
+          .dropdown-menu.pull-right.with-arrow.panel.panel-default.animated.littleFadeInDown
+            .panel-heading
+              | You have 
+              strong 4
+              |  messages
+            ul.list-group
+              li.list-group-item
+                a.media(href='javascript:;')
+                  span.pull-left.media-object.thumb.thumb-sm
+                    img.img-circle(src='images/ici-avatar.jpg', alt='')
+                  .media-body
+                    span.block Imrich sent you a message
+                    small.text-muted 12 minutes ago
+              li.list-group-item
+                a.media(href='javascript:;')
+                  span.pull-left.media-object.thumb.thumb-sm
+                    img.img-circle(src='images/peter-avatar.jpg', alt='')
+                  .media-body
+                    span.block Peter sent you a message
+                    small.text-muted 46 minutes ago
+              li.list-group-item
+                a.media(href='javascript:;')
+                  span.pull-left.media-object.thumb.thumb-sm
+                    img.img-circle(src='images/random-avatar1.jpg', alt='')
+                  .media-body
+                    span.block Bill sent you a message
+                    small.text-muted 1 hour ago
+              li.list-group-item
+                a.media(href='javascript:;')
+                  span.pull-left.media-object.thumb.thumb-sm
+                    img.img-circle(src='images/random-avatar3.jpg', alt='')
+                  .media-body
+                    span.block Ken sent you a message
+                    small.text-muted 3 hours ago
+            .panel-footer
+              a(href='javascript:;')
+                | Show all messages 
+                fa.pull-right(name='angle-right')
+        li.dropdown.notifications(on-toggle='toggled(open)')
+          a.dropdown-toggle(href='')
+            fa(name='bell')
+            span.badge.bg-lightred 3
+          .dropdown-menu.pull-right.with-arrow.panel.panel-default.animated.littleFadeInLeft
+            .panel-heading
+              | You have 
+              strong 3
+              |  notifications
+            ul.list-group
+              li.list-group-item
+                a.media(href='javascript:;')
+                  span.pull-left.media-object.media-icon.bg-danger
+                    fa(name='ban')
+                  .media-body
+                    span.block User Imrich cancelled account
+                    small.text-muted 6 minutes ago
+              li.list-group-item
+                a.media(href='javascript:;')
+                  span.pull-left.media-object.media-icon.bg-primary
+                    fa(name='bolt')
+                  .media-body
+                    span.block New user registered
+                    small.text-muted 12 minutes ago
+              li.list-group-item
+                a.media(href='javascript:;')
+                  span.pull-left.media-object.media-icon.bg-greensea
+                    fa(name='lock')
+                  .media-body
+                    span.block User Robert locked account
+                    small.text-muted 18 minutes ago
+            .panel-footer
+              a(href='javascript:;')
+                | Show all notifications 
+                fa.pull-right(name='angle-right')
+        li.dropdown.nav-profile(on-toggle='toggled(open)')
+          a.dropdown-toggle(href='')
+            img.img-circle.size-30x30(src='images/profile-photo.jpg', alt='')
+            span
+              | John Douey 
+              fa(name='angle-down')
+          ul.dropdown-menu.animated.littleFadeInRight
+            li
+              a(href='#')
+                span.badge.bg-greensea.pull-right 86%
+                fa(name='user')
+                | Profile
+            li
+              a(href='#')
+                span.label.bg-lightred.pull-right new
+                fa(name='check')
+                | Tasks
+            li
+              a(href='#')
+                fa(name='cog')
+                | Settings
+            li.divider
+            li
+              a(href='#')
+                fa(name='lock')
+                | Lock
+            li
+              a(href='#')
+                fa(name='sign-out')
+                | Logout
+        li.toggle-right-sidebar
+          a(href='javascript:;', ng-click='main.settings.rightbarShow = !main.settings.rightbarShow')
+            fa(name='comments')
+      // Right-side navigation end
