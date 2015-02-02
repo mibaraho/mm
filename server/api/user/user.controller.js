@@ -1,7 +1,7 @@
 'use strict';
 
 var User = require('./user.model');
-var Organization = require('../organization/organization.model');
+var Organization = require('../organization/organization.controller');
 var passport = require('passport');
 var config = require('../../config/environment');
 var jwt = require('jsonwebtoken');
@@ -25,15 +25,38 @@ exports.index = function(req, res) {
  * Creates a new user
  */
 exports.create = function (req, res, next) {
-	//It exposes 3 options for creating a user:
-	//
-	//1. Creating a user and associating him an organization with a not given name (as in the simple
-	//self-service user who creates an individual account)
-	//
-	//2. Creating a user and associating him an organization with a given name (as in the user interface allowing you to set your company name)
-	//
-	//3. Creating a user and associating an existing organization.
+  //It exposes 3 options for creating a user:
+  //
+  //1. Creating a user and associating him an organization with a not given name (as in the simple
+  //self-service user who creates an individual account)
+  //
+  //2. Creating a user and associating him an organization with a given name (as in the user interface allowing you to set your company name)
+  //
+  //3. Creating a user and associating an existing organization.
+  //Comment 1: Consider a second version who creater an organization based in the organization controller and not in
+  //the organization object.
 	
+  //Case 1
+  if(!req.body.organizationName&&!req.body._organization) {
+    var organization = new Organization({ name : generateCompanyNameBasedOnUserName(req.body.name)});
+	organization.save(function(saveOrganizationError){
+		if(saveOrganizationError) return handleError(res, saveOrganizationError);
+	
+	
+	});
+	
+  } else
+  if(req.body.organizationName&&!req.body._organization) {
+	  
+  } else
+  if(req.body._organization) {
+  
+  }
+  
+  
+  
+  
+  
   var newUser = new User(req.body);
   newUser.provider = 'local';
   newUser.role = 'user';
@@ -109,3 +132,15 @@ exports.me = function(req, res, next) {
 exports.authCallback = function(req, res, next) {
   res.redirect('/');
 };
+
+/**
+ * Handle error
+ */
+function handleError(res, err) {
+  return res.send(500, err);
+}
+
+function generateCompanyNameBasedOnUserName(ownersName, lang){
+	var template = 'Empresa de OWNERS_NAME';
+	return template.replace('OWNERS_NAME', ownersName)
+}
