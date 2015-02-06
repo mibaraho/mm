@@ -6,5 +6,3 @@ angular.module('mmApp').controller 'NavCtrl', ($scope) ->
     isFirstOpen: true
     isSecondOpen: true
     isThirdOpen: true
-  return
-

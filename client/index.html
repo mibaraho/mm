@@ -23,13 +23,15 @@
       <link rel="stylesheet" href="app/account/login/login.css">
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/dashboard/dashboard.css">
       <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="app/minutes/minutes.list.css">
       <link rel="stylesheet" href="app/theme.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body ng-app="mmApp">
+  <body ng-app="mmApp" id="mm" class="{{main.settings.navbarHeaderColor}} {{main.settings.activeColor}} {{containerClass}}" ng-class="{'header-fixed':main.settings.headerFixed, 'header-static':!main.settings.headerFixed, 'aside-fixed':main.settings.asideFixed, 'aside-static':!main.settings.asideFixed, 'rightbar-show':main.settings.rightbarShow, 'rightbar-hidden':!main.settings.rightbarShow }">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -75,7 +77,9 @@
           <script src="app/account/settings/settings.js"></script>
           <script src="app/account/signup/signup.js"></script>
           <script src="app/admin/admin.js"></script>
+          <script src="app/dashboard/dashboard.js"></script>
           <script src="app/main/main.js"></script>
+          <script src="app/minutes/minutes.js"></script>
           <script src="components/auth/auth.js"></script>
           <script src="components/auth/user.js"></script>
           <script src="components/modal/modal.js"></script>

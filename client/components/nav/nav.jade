@@ -1,383 +1,58 @@
-html
-  body
-    #sidebar-wrap(ng-controller='NavCtrl')
-      accordion(close-others='oneAtTime', slimscroll="{height: '100%'}")
-        accordion-group(is-open='status.isFirstOpen', ng-class="{'open': status.isFirstOpen, 'closed': !status.isFirstOpen}")
-          accordion-heading
-            | Navigation 
-            i.fa(ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}")
-          ul#navigation(nav-collapse='', ripple='')
+#sidebar-wrap(ng-controller='NavCtrl')
+  accordion(close-others='oneAtTime', slimscroll="{height: '100%'}")
+    accordion-group(is-open='status.isFirstOpen', ng-class="{'open': status.isFirstOpen, 'closed': !status.isFirstOpen}")
+      accordion-heading
+        | Navigation 
+        i.fa(ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}")
+      ul#navigation(nav-collapse='', ripple='')
+        li(ui-sref-active='active')
+          a(ui-sref='main.dashboard')
+            i.fa.fa-dashboard
+            span Dashboard
+        li(ui-sref-active='active', ng-class="{'open':$state.includes('main.minutes')}")
+          a(ui-sref='main.minutes')
+            i.fa.fa-briefcase
+            span Minutes
+          ul.dropdown
             li(ui-sref-active='active')
-              a(ui-sref='app.dashboard')
-                fa(name='dashboard')
-                span Dashboard
-            li(ui-sref-active='active', ng-class="{'open':$state.includes('app.mail')}")
-              a(ui-sref='app.mail')
-                fa(name='envelope-o')
-                span Mail
-                span.badge.bg-lightred 6
-              ul
-                li(ui-sref-active='active')
-                  a(ui-sref='app.mail.inbox')
-                    fa(name='caret-right')
-                    |  Inbox
-                li(ui-sref-active='active')
-                  a(ui-sref='app.mail.compose')
-                    fa(name='caret-right')
-                    |  Compose Mail
-                li(ui-sref-active='active')
-                  a(ui-sref='app.mail.single')
-                    fa(name='caret-right')
-                    |  Single Mail
-            li(ui-sref-active='active', ng-class="{'open':$state.includes('app.forms')}")
-              a(ui-sref='app.forms')
-                fa(name='list')
-                span Form Stuff
-              ul
-                li(ui-sref-active='active')
-                  a(ui-sref='app.forms.common')
-                    fa(name='caret-right')
-                    |  Common Elements
-                li(ui-sref-active='active')
-                  a(ui-sref='app.forms.validate')
-                    fa(name='caret-right')
-                    |  Validation Elements
-                li(ui-sref-active='active')
-                  a(ui-sref='app.forms.wizard')
-                    fa(name='caret-right')
-                    |  Form Wizard 
-                    span.badge.badge-success 13
-                li(ui-sref-active='active')
-                  a(ui-sref='app.forms.upload')
-                    fa(name='caret-right')
-                    |  File Upload
-                li(ui-sref-active='active')
-                  a(ui-sref='app.forms.imgcrop')
-                    fa(name='caret-right')
-                    |  Image Crop
-            li(ui-sref-active='active', ng-class="{'open':$state.includes('app.ui')}")
-              a(ui-sref='app.ui')
-                fa(name='pencil')
-                span UI Kit
-              ul
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.general')
-                    fa(name='caret-right')
-                    |  General Elements
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.buttons-icons')
-                    fa(name='caret-right')
-                    |  Buttons & Icons
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.typography')
-                    fa(name='caret-right')
-                    |  Typography
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.navs')
-                    fa(name='caret-right')
-                    |  Navigation & Accordions
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.modals')
-                    fa(name='caret-right')
-                    |  Modals
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.tiles')
-                    fa(name='caret-right')
-                    |  Tiles
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.portlets')
-                    fa(name='caret-right')
-                    |  Portlets
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.grid')
-                    fa(name='caret-right')
-                    |  Grid
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.widgets')
-                    fa(name='caret-right')
-                    |  Widgets
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.tree')
-                    fa(name='caret-right')
-                    |  Tree
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.lists')
-                    fa(name='caret-right')
-                    |  Lists
-                li(ui-sref-active='active')
-                  a(ui-sref='app.ui.alerts')
-                    fa(name='caret-right')
-                    |  Alerts & Notifications
-            li
-              a(href='#/shop')
-                fa(name='shopping-cart')
-                span Shop
-                span.label.label-warning coming in 1.1
-              ul
-                li
-                  a(href='#/shop/orders')
-                    fa(name='caret-right')
-                    |  Orders
-                li
-                  a(href='#/shop/order')
-                    fa(name='caret-right')
-                    |  Single Order
-                li
-                  a(href='#/shop/products')
-                    fa(name='caret-right')
-                    |  Products
-                li
-                  a(href='#/shop/product')
-                    fa(name='caret-right')
-                    |  Single Product
-                li
-                  a(href='#/shop/invoices')
-                    fa(name='caret-right')
-                    |  Invoices
-                li
-                  a(href='#/shop/invoice')
-                    fa(name='caret-right')
-                    |  Single Invoice
-            li(ui-sref-active='active', ng-class="{'open':$state.includes('app.tables')}")
-              a(ui-sref='app.tables')
-                fa(name='table')
-                span Tables
-              ul
-                li(ui-sref-active='active')
-                  a(ui-sref='app.tables.bootstrap')
-                    fa(name='caret-right')
-                    |  Bootstrap Tables
-                li(ui-sref-active='active')
-                  a(ui-sref='app.tables.datatables')
-                    fa(name='caret-right')
-                    |  DataTables
-                li(ui-sref-active='active')
-                  a(ui-sref='app.tables.ui-grid')
-                    fa(name='caret-right')
-                    |  UI Grid
-                li(ui-sref-active='active')
-                  a(ui-sref='app.tables.ng-table')
-                    fa(name='caret-right')
-                    |  ngTable
-                li(ui-sref-active='active')
-                  a(ui-sref='app.tables.smart-table')
-                    fa(name='caret-right')
-                    |  Smart Table
-                li(ui-sref-active='active')
-                  a(ui-sref='app.tables.footable')
-                    fa(name='caret-right')
-                    |  FooTable
-            li(ui-sref-active='active', ng-class="{'open':$state.includes('app.pages')}")
-              a(ui-sref='app.pages')
-                fa(name='desktop')
-                span Extra Pages
-              ul
-                li(ui-sref-active='active')
-                  a(ui-sref='core.login')
-                    fa(name='caret-right')
-                    |  Login Page
-                li(ui-sref-active='active')
-                  a(ui-sref='core.signup')
-                    fa(name='caret-right')
-                    |  Signup Page
-                li(ui-sref-active='active')
-                  a(ui-sref='core.forgotpass')
-                    fa(name='caret-right')
-                    |  Forgot Password Page
-                li(ui-sref-active='active')
-                  a(ui-sref='core.page404')
-                    fa(name='caret-right')
-                    |  Page 404
-                li(ui-sref-active='active')
-                  a(ui-sref='core.page500')
-                    fa(name='caret-right')
-                    |  Page 500
-                li(ui-sref-active='active')
-                  a(ui-sref='core.page-offline')
-                    fa(name='caret-right')
-                    |  Page Offline
-                li(ui-sref-active='active')
-                  a(ui-sref='core.locked')
-                    fa(name='caret-right')
-                    |  Locked Screen
-                li(ui-sref-active='active')
-                  a(ui-sref='app.pages.gallery')
-                    fa(name='caret-right')
-                    |  Gallery
-                li(ui-sref-active='active')
-                  a(ui-sref='app.pages.timeline')
-                    fa(name='caret-right')
-                    |  Timeline
-                li(ui-sref-active='active')
-                  a(ui-sref='app.pages.chat')
-                    fa(name='caret-right')
-                    |  Chat
-                li(ui-sref-active='active')
-                  a(ui-sref='app.pages.search-results')
-                    fa(name='caret-right')
-                    |  Search Results
-                li(ui-sref-active='active')
-                  a(ui-sref='app.pages.profile')
-                    fa(name='caret-right')
-                    |  Profile Page
-            li(ui-sref-active='active', ng-class="{'open':$state.includes('app.layouts')}")
-              a(ui-sref='app.layouts')
-                fa(name='delicious')
-                span Layouts
-              ul
-                li(ui-sref-active='active')
-                  a(ui-sref='app.layouts.boxed')
-                    fa(name='caret-right')
-                    |  Boxed layout
-                li(ui-sref-active='active')
-                  a(ui-sref='app.layouts.fullwidth')
-                    fa(name='caret-right')
-                    |  Full-width layout
-                li(ui-sref-active='active')
-                  a(ui-sref='app.layouts.sidebar-sm')
-                    fa(name='caret-right')
-                    |  Small sidebar
-                li(ui-sref-active='active')
-                  a(ui-sref='app.layouts.sidebar-xs')
-                    fa(name='caret-right')
-                    |  Extra-small sidebar
-                li(ui-sref-active='active')
-                  a(ui-sref='app.layouts.hz-menu')
-                    fa(name='caret-right')
-                    |  Horizontal menu
-                li(ui-sref-active='active')
-                  a(ui-sref='app.layouts.rtl')
-                    fa(name='caret-right')
-                    |  RTL layout
-            li
-              a(href='#/frontend')
-                fa(name='file-o')
-                span Front Themes
-                span.label.label-warning coming in 1.2
-              ul
-                li
-                  a(href='#/frontend/corporate')
-                    fa(name='caret-right')
-                    |  Corporate
-                li
-                  a(href='#/frontend/commerce')
-                    fa(name='caret-right')
-                    |  Commerce
-            li(ui-sref-active='active', ng-class="{'open':$state.includes('app.maps')}")
-              a(ui-sref='app.maps')
-                fa(name='map-marker')
-                span Maps
-              ul
-                li(ui-sref-active='active')
-                  a(ui-sref='app.maps.vector')
-                    fa(name='caret-right')
-                    |  Vector Maps
-                li(ui-sref-active='active')
-                  a(ui-sref='app.maps.google')
-                    fa(name='caret-right')
-                    |  Google Maps
+              a(ui-sref='main.minutes.list-mine')
+                i.fa.fa-caret-right
+                |  Authored by me
             li(ui-sref-active='active')
-              a(ui-sref='app.calendar')
-                fa(name='calendar-o')
-                span Calendar
-                span.label.label-success new events
+              a(ui-sref='main.minutes.list-others')
+                i.fa.fa-caret-right
+                |  By others
+        li(ui-sref-active='active', ng-class="{'open':$state.includes('main.minutes')}")
+          a(ui-sref='main.minutes')
+            i.fa.fa-briefcase
+            span Reminders
+          ul.dropdown
             li(ui-sref-active='active')
-              a(ui-sref='app.charts')
-                fa(name='bar-chart-o')
-                span Charts & Graphs
-            li
-              a(href='javascript:;')
-                fa(name='magic')
-                span Menu Levels
-              ul
-                li
-                  a(href='javascript:;')
-                    fa(name='caret-right')
-                    |  Menu Level 1.1
-                  ul
-                    li
-                      a(href='javascript:;')
-                        fa(name='caret-right')
-                        |  Menu Level 2.1
-                    li
-                      a(href='javascript:;')
-                        fa(name='caret-right')
-                        |  Menu Level 2.2
-                    li
-                      a(href='javascript:;')
-                        fa(name='caret-right')
-                        |  Menu Level 2.3
-                      ul
-                        li
-                          a(href='javascript:;')
-                            fa(name='caret-right')
-                            |  Menu Level 3.1
-                        li
-                          a(href='javascript:;')
-                            fa(name='caret-right')
-                            |  Menu Level 3.2
-                li
-                  a(href='javascript:;')
-                    fa(name='caret-right')
-                    |  Menu Level 1.2
-                  ul
-                    li
-                      a(href='javascript:;')
-                        fa(name='caret-right')
-                        |  Menu Level 2.1
-                      ul
-                        li
-                          a(href='javascript:;')
-                            fa(name='caret-right')
-                            |  Menu Level 3.1
-                        li
-                          a(href='javascript:;')
-                            fa(name='caret-right')
-                            |  Menu Level 3.2
-                          ul
-                            li
-                              a(href='javascript:;')
-                                fa(name='caret-right')
-                                |  Menu Level 4.1
-                            li
-                              a(href='javascript:;')
-                                fa(name='caret-right')
-                                |  Menu Level 4.2
-                        li
-                          a(href='javascript:;')
-                            fa(name='caret-right')
-                            |  Menu Level 3.3
-                    li
-                      a(href='javascript:;')
-                        fa(name='caret-right')
-                        |  Menu Level 2.2
+              a(ui-sref='main.minutes.list-mine')
+                i.fa.fa-caret-right
+                |  My reminders
             li(ui-sref-active='active')
-              a(ui-sref='app.help')
-                fa(name='book')
-                span Documentation
-        accordion-group.charts(is-open='status.isSecondOpen', ng-class="{'open': status.isSecondOpen, 'closed': !status.isSecondOpen}")
-          accordion-heading
-            | Orders Summary 
-            i.fa(ng-class="{'fa-angle-up': status.isSecondOpen, 'fa-angle-down': !status.isSecondOpen}")
-        accordion-group.settings(is-open='status.isThirdOpen', ng-class="{'open': status.isThirdOpen, 'closed': !status.isThirdOpen}")
-          accordion-heading
-            | General Settings 
-            i.fa(ng-class="{'fa-angle-up': status.isThirdOpen, 'fa-angle-down': !status.isThirdOpen}")
-          .form-group
-            .row
-              label.col-xs-8.control-label Switch ON
-              .col-xs-4.control-label
-                .onoffswitch.greensea
-                  input#switch-on.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='')
-                  label.onoffswitch-label(for='switch-on')
-                    span.onoffswitch-inner
-                    span.onoffswitch-switch
-          .form-group
-            .row
-              label.col-xs-8.control-label Switch OFF
-              .col-xs-4.control-label
-                .onoffswitch.greensea
-                  input#switch-off.onoffswitch-checkbox(type='checkbox', name='onoffswitch')
-                  label.onoffswitch-label(for='switch-off')
-                    span.onoffswitch-inner
-                    span.onoffswitch-switch
+              a(ui-sref='main.minutes.list-others')
+                i.fa.fa-caret-right
+                |  By others
+        li(ui-sref-active='active', ng-class="{'open':$state.includes('main.minutes')}")
+          a(ui-sref='main.minutes')
+            i.fa.fa-cog
+            span Administration
+          ul.dropdown
+            li(ui-sref-active='active')
+              a(ui-sref='main.minutes.list-mine')
+                i.fa.fa-caret-right
+                |  Templates
+            li(ui-sref-active='active')
+              a(ui-sref='main.minutes.list-others')
+                i.fa.fa-caret-right
+                |  Users
+            li(ui-sref-active='active')
+              a(ui-sref='app.ui.portlets')
+                i.fa.fa-caret-right
+                |  Visibility
+            li(ui-sref-active='active')
+              a(ui-sref='app.ui.portlets')
+                i.fa.fa-caret-right
+                |  Account

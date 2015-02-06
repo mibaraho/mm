@@ -10,11 +10,11 @@ angular.module 'mmApp', [
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
   $urlRouterProvider
-  .otherwise '/'
-
-  $locationProvider.html5Mode true
+  .otherwise '/dashboard'
   $httpProvider.interceptors.push 'authInterceptor'
 
+  
+  
 .factory 'authInterceptor', ($rootScope, $q, $cookieStore, $location) ->
   # Add authorization token to headers
   request: (config) ->

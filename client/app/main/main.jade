@@ -1,8 +1,6 @@
-html
-  body
-    section#header(ng-include="'components/header/header.html'", class='{{main.settings.navbarHeaderColor}}')
-    #controls
-      aside#sidebar(ng-include="'components/nav/nav.html'", class='{{main.settings.sidebarColor}}', ng-class="{'aside-fixed':main.settings.asideFixed}")
-      aside#rightbar(ng-include="'components/rightbar/rightbar.html'")
-    .view-container(ui-view-container='')
-      section#content(ui-view='', autoscroll='false')
+section#header(ng-include="'components/header/header.html'", class='{{main.settings.navbarHeaderColor}}')
+#controls
+  aside#sidebar(ng-include="'components/nav/nav.html'", class='{{main.settings.sidebarColor}}', ng-class="{'aside-fixed':main.settings.asideFixed}")
+  aside#rightbar(ng-include="'components/rightbar/rightbar.html'")
+.view-container(ui-view-container='')
+  section#content(ui-view='', autoscroll='false')
