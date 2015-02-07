@@ -3,7 +3,7 @@
 angular.module 'mmApp'
 .config ($stateProvider) ->
   $stateProvider
-  .state('main.admin', {
-    url: '/admin',
+  .state('main.reminders', {
+    url: '/r',
     template: '<div ui-view></div>'
   })
