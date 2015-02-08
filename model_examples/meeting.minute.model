@@ -1,0 +1,54 @@
+name = Work meeting for new idea!
+location = Client's office
+state = created
+author
+  _id = a9afdd3a-faa8-408d-a053-3d7cc5234cf2
+  name = Matías Barahona
+  email = mibaraho@gmail.com
+participants[0]
+  _id = a9afdd3a-faa8-408d-a053-3d7cc5234cf2
+  name = Matías Barahona
+  email = mibaraho@gmail.com
+participants[1]
+  _id = 56df4690-61d3-4917-9220-4f190c1905ef 
+  name = Luigi Barahona
+  email = luigi.barahona@client.com
+participants[2]
+  _id=1fa05364-7c36-4a2a-a51a-cc38faed69b6
+  name=Mario Montero
+  email = mario.montero@organization.com
+nextMeeting d = 2015-02-14
+context
+  type = client
+  category = project
+client
+  _id = d0338bfa-3bac-40e7-8647-39b41d3793af
+  name = A huge client
+project
+  _id = 62f02e8b-cf40-4944-8694-14c747353ca8
+  name = Product implementation
+elements[0]
+  type = comment
+  description=Luigi proposes to get a new technology to build the product, considering the industry standards
+  owner
+    _id=56df4690-61d3-4917-9220-4f190c1905ef 
+    name=Luigi Barahona
+    email = luigi.barahona@client.com
+elements[1]
+  type = comment
+  description=Mario agrees with Luigi
+  owner
+    _id=1fa05364-7c36-4a2a-a51a-cc38faed69b6
+    name=Mario Montero
+    email = mario.montero@organization.com
+elements[2]
+  type = action-item
+  description=Luigi will look for documentation and will get a test of the new technology applied
+  dueDate d= 2015-03-11 
+  owner
+    _id = 56df4690-61d3-4917-9220-4f190c1905ef 
+    name = Luigi Barahona
+    email = luigi.barahona@client.com
+  reminders[0]
+    type = email
+    rule = send-once
