@@ -4,6 +4,7 @@ angular.module 'mmApp'
 .config ($stateProvider) ->
   $stateProvider
   .state 'main',
-    url: '/'
+    abstract: true
+    url: ''
     templateUrl: 'app/main/main.html'
     controller: 'MainCtrl'

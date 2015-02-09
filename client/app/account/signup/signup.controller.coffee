@@ -6,7 +6,6 @@ angular.module 'mmApp'
   $scope.errors = {}
   $scope.register = (form) ->
     $scope.submitted = true
-
     if form.$valid
       # Account created, redirect to home
       Auth.createUser

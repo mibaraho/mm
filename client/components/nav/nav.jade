@@ -1,0 +1,72 @@
+#sidebar-wrap(ng-controller='NavCtrl')
+  .slimScrollDiv
+    accordion(close-others='oneAtTime', slimscroll="{height: '100%'}")
+      accordion-group(is-open='status.isFirstOpen', ng-class="{'open': status.isFirstOpen, 'closed': !status.isFirstOpen}")
+        accordion-heading
+          | Navigation 
+          i.fa(ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}")
+        ul#navigation(nav-collapse='', ripple='')
+          li(ui-sref-active='active')
+            a(ui-sref='main.dashboard')
+              i.fa.fa-dashboard
+              span Dashboard
+          li.dropdown.list-unstyled(on-toggle='toggled(open)', ui-sref-active='active', ng-class="{'open':$state.includes('main.minutes')}")
+            a(ui-sref='main.minutes')
+              i.fa.fa-briefcase
+              span Minutes
+            ul
+              li(ui-sref-active='active')
+                a(ui-sref='main.minutes.list-mine')
+                  i.fa.fa-caret-right
+                  |  Authored by me
+              li(ui-sref-active='active')
+                a(ui-sref='main.minutes.list-others')
+                  i.fa.fa-caret-right
+                  |  By others
+          li.dropdown.list-unstyled(on-toggle='toggled(open)', ui-sref-active='active', ng-class="{'open':$state.includes('main.actions')}")
+            a(ui-sref='main.actions')
+              i.fa.fa-briefcase
+              span Actions
+            ul
+              li(ui-sref-active='active')
+                a(ui-sref='main.actions.list-mine')
+                  i.fa.fa-caret-right
+                  |  Authored by me
+              li(ui-sref-active='active')
+                a(ui-sref='main.actions.list-others')
+                  i.fa.fa-caret-right
+                  |  By others
+          li.dropdown.list-unstyled(on-toggle='toggled(open)',  ng-class="{'open':$state.includes('main.reminders')}")
+            a(ui-sref='main.reminders')
+              i.fa.fa-briefcase
+              span Reminders
+            ul
+              li(ui-sref-active='active')
+                a(ui-sref='main.reminders.list-mine')
+                  i.fa.fa-caret-right
+                  |  My reminders
+              li(ui-sref-active='active')
+                a(ui-sref='main.reminders.list-others')
+                  i.fa.fa-caret-right
+                  |  By others
+          li.dropdown.list-unstyled(on-toggle='toggled(open)', ui-sref-active='active', ng-class="{'open':$state.includes('main.admin')}")
+            a(ui-sref='main.admin')
+              i.fa.fa-cog
+              span Administration
+            ul
+              li(ui-sref-active='active')
+                a(ui-sref='main.admin.templates')
+                  i.fa.fa-caret-right
+                  |  Templates
+              li(ui-sref-active='active')
+                a(ui-sref='main.admin.users')
+                  i.fa.fa-caret-right
+                  |  Users
+              li(ui-sref-active='active')
+                a(ui-sref='main.admin.visibility')
+                  i.fa.fa-caret-right
+                  |  Visibility
+              li(ui-sref-active='active')
+                a(ui-sref='main.admin.account')
+                  i.fa.fa-caret-right
+                  |  Account

@@ -1,0 +1,250 @@
+.page.page-tiles
+  .pageheader
+    h2
+      | {{page.title}} 
+      span // {{page.subtitle}}
+    .page-bar
+      ul.page-breadcrumb
+        li
+          a(ui-sref='main.dashboard')
+            i.fa.fa-home
+            |  {{main.title}}
+        li
+          a(ui-sref='main.minutes.list') {{page.title}}
+
+  // page content
+  .pagecontent
+    // row
+    .row
+      // col
+      .col-md-4
+        // tile
+        section.tile(fullscreen='isFullscreen05')
+          // tile header
+          .tile-header.bg-slategray.text-center
+            button.btn.bg-tr-black.pull-left.btn-black-transparent(type='button')
+              i.fa.fa-caret-square-o-down
+            h4.custom-font.text-uppercase
+              strong Add
+              |  a new meeting
+            ul.controls
+              li.dropdown(on-toggle='toggled(open)')
+                a.dropdown-toggle.settings(href='')
+                  i.fa.fa-cog
+                  ul.dropdown-menu.pull-right.with-arrow.animated.littleFadeInUp
+                    li
+                      a(href='', tile-control-toggle='')
+                        span.minimize
+                          fa(name='angle-down')
+                          |   Minimize
+                        span.expand
+                          fa(name='angle-up')
+                          |   Expand
+                    li
+                      a(href='', tile-control-fullscreen='', ng-click='isFullscreen05 = !isFullscreen05')
+                        fa(name='expand')
+                  |  Fullscreen
+              li.remove
+                a(href='', tile-control-close='')
+                  i.fa.fa-times
+          //tile header
+          // tile widget
+          .tile-widget
+            p This is tile widget area.
+          // /tile widget
+          // tile body
+          .tile-body
+            p This is tile body area.
+          // /tile body
+          // tile footer
+          .tile-footer
+            p This is tile footer area.
+          // /tile footer
+        // /tile
+      // /col
+      // col
+      .col-md-4
+        // tile
+        section.tile(fullscreen='isFullscreen05')
+          // tile header
+          .tile-header.bg-slategray.text-center
+            button.btn.bg-tr-black.pull-left.btn-black-transparent(type='button')
+              i.fa.fa-caret-square-o-down
+            h4.custom-font.text-uppercase
+              strong Heading
+              |  with Button
+            ul.controls
+              li.dropdown(on-toggle='toggled(open)')
+                a.dropdown-toggle.settings(href='')
+                  i.fa.fa-cog
+                  ul.dropdown-menu.pull-right.with-arrow.animated.littleFadeInUp
+                    li
+                      a(href='', tile-control-toggle='')
+                        span.minimize
+                          fa(name='angle-down')
+                          |   Minimize
+                        span.expand
+                          fa(name='angle-up')
+                          |   Expand
+                    li
+                      a(href='', tile-control-fullscreen='', ng-click='isFullscreen05 = !isFullscreen05')
+                        fa(name='expand')
+                  |  Fullscreen
+              li.remove
+                a(href='', tile-control-close='')
+                  i.fa.fa-times
+          //tile header
+          // tile widget
+          .tile-widget
+            p This is tile widget area.
+          // /tile widget
+          // tile body
+          .tile-body
+            p This is tile body area.
+          // /tile body
+          // tile footer
+          .tile-footer
+            p This is tile footer area.
+          // /tile footer
+        // /tile
+      // /col
+      // col
+      .col-md-4
+        // tile
+        section.tile(fullscreen='isFullscreen05')
+          // tile header
+          .tile-header.bg-slategray.text-center
+            button.btn.bg-tr-black.pull-left.btn-black-transparent(type='button')
+              i.fa.fa-caret-square-o-down
+            h4.custom-font.text-uppercase
+              strong Heading
+              |  with Button
+            ul.controls
+              li.dropdown(on-toggle='toggled(open)')
+                a.dropdown-toggle.settings(href='')
+                  i.fa.fa-cog
+                  ul.dropdown-menu.pull-right.with-arrow.animated.littleFadeInUp
+                    li
+                      a(href='', tile-control-toggle='')
+                        span.minimize
+                          fa(name='angle-down')
+                          |   Minimize
+                        span.expand
+                          fa(name='angle-up')
+                          |   Expand
+                    li
+                      a(href='', tile-control-fullscreen='', ng-click='isFullscreen05 = !isFullscreen05')
+                        fa(name='expand')
+                  |  Fullscreen
+              li.remove
+                a(href='', tile-control-close='')
+                  i.fa.fa-times
+          //tile header
+          // tile widget
+          .tile-widget
+            p This is tile widget area.
+          // /tile widget
+          // tile body
+          .tile-body
+            p This is tile body area.
+          // /tile body
+          // tile footer
+          .tile-footer
+            p This is tile footer area.
+          // /tile footer
+        // /tile
+      // /col
+      // col
+      .col-md-4
+        // tile
+        section.tile(fullscreen='isFullscreen05')
+          // tile header
+          .tile-header.bg-slategray.text-center
+            button.btn.bg-tr-black.pull-left.btn-black-transparent(type='button')
+              i.fa.fa-caret-square-o-down
+            h4.custom-font.text-uppercase
+              strong Heading
+              |  with Button
+            ul.controls
+              li.dropdown(on-toggle='toggled(open)')
+                a.dropdown-toggle.settings(href='')
+                  i.fa.fa-cog
+                  ul.dropdown-menu.pull-right.with-arrow.animated.littleFadeInUp
+                    li
+                      a(href='', tile-control-toggle='')
+                        span.minimize
+                          fa(name='angle-down')
+                          |   Minimize
+                        span.expand
+                          fa(name='angle-up')
+                          |   Expand
+                    li
+                      a(href='', tile-control-fullscreen='', ng-click='isFullscreen05 = !isFullscreen05')
+                        fa(name='expand')
+                  |  Fullscreen
+              li.remove
+                a(href='', tile-control-close='')
+                  i.fa.fa-times
+          //tile header
+          // tile widget
+          .tile-widget
+            p This is tile widget area.
+          // /tile widget
+          // tile body
+          .tile-body
+            p This is tile body area.
+          // /tile body
+          // tile footer
+          .tile-footer
+            p This is tile footer area.
+          // /tile footer
+        // /tile
+      // /col
+      // col
+      .col-md-4
+        // tile
+        section.tile(fullscreen='isFullscreen05')
+          // tile header
+          .tile-header.bg-slategray.text-center
+            button.btn.bg-tr-black.pull-left.btn-black-transparent(type='button')
+              i.fa.fa-caret-square-o-down
+            h4.custom-font.text-uppercase
+              strong Heading
+              |  with Button
+            ul.controls
+              li.dropdown(on-toggle='toggled(open)')
+                a.dropdown-toggle.settings(href='')
+                  i.fa.fa-cog
+                  ul.dropdown-menu.pull-right.with-arrow.animated.littleFadeInUp
+                    li
+                      a(href='', tile-control-toggle='')
+                        span.minimize
+                          fa(name='angle-down')
+                          |   Minimize
+                        span.expand
+                          fa(name='angle-up')
+                          |   Expand
+                    li
+                      a(href='', tile-control-fullscreen='', ng-click='isFullscreen05 = !isFullscreen05')
+                        fa(name='expand')
+                  |  Fullscreen
+              li.remove
+                a(href='', tile-control-close='')
+                  i.fa.fa-times
+          //tile header
+          // tile widget
+          .tile-widget
+            p This is tile widget area.
+          // /tile widget
+          // tile body
+          .tile-body
+            p This is tile body area.
+          // /tile body
+          // tile footer
+          .tile-footer
+            p This is tile footer area.
+          // /tile footer
+        // /tile
+      // /col
+    // /row
+  // /page content
