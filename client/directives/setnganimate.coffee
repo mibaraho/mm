@@ -1,16 +1,16 @@
-'use strict';
+'use strict'
 
 
-angular.module('mmApp')
-  .directive('setNgAnimate', ['$animate', function ($animate) {
-    return {
-      link: function ($scope, $element, $attrs) {
-        $scope.$watch( function() {
-          return $scope.$eval($attrs.setNgAnimate, $scope);
-        }, function(valnew){
-          console.log('Directive animation Enabled: ' + valnew);
-          $animate.enabled(!!valnew, $element);
-        });
-      }
-    };
-  }]);
+angular.module('mmApp').directive 'setNgAnimate', [
+  '$animate'
+  ($animate) ->
+    { link: ($scope, $element, $attrs) ->
+      $scope.$watch (->
+        $scope.$eval $attrs.setNgAnimate, $scope
+      ), (valnew) ->
+        console.log 'Directive animation Enabled: ' + valnew
+        $animate.enabled !!valnew, $element
+        return
+      return
+ }
+]

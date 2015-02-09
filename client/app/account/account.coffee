@@ -18,3 +18,9 @@ angular.module 'mmApp'
     templateUrl: 'app/account/settings/settings.html'
     controller: 'SettingsCtrl'
     authenticate: true
+
+  .state 'recover',
+    url: '/recover'
+    templateUrl: 'app/account/forgot-password/forgot-password.html'
+    controller: 'ForgotPasswordCtrl'
+    authenticate: true

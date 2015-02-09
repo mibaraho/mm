@@ -1,4 +1,4 @@
-header.clearfix
+header.clearfix(ng-controller='HeaderCtrl')
   // Branding
   .branding(class='{{main.settings.brandingColor}}')
     a.brand(ui-sref='app.dashboard')
@@ -205,7 +205,7 @@ header.clearfix
       a.dropdown-toggle(href='')
         img.img-circle.size-30x30(src='assets/images/profile-photo.jpg', alt='')
         span
-          | John Douey 
+          | {{ getCurrentUser().name }}
           i.fa.fa-angle-down
       ul.dropdown-menu.animated.littleFadeInRight
         li
@@ -224,11 +224,7 @@ header.clearfix
             | Settings
         li.divider
         li
-          a(href='#')
-            i.fa.fa-lock
-            | Lock
-        li
-          a(href='#')
+          a(href='#' ng-click='logout()')
             i.fa.fa-sign-out
             | Logout
     li.toggle-right-sidebar

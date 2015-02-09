@@ -6,4 +6,5 @@ angular.module 'mmApp'
   .state 'main.minutes.list-mine',
     url: '/mine'
     controller: 'MinutesListMineCtrl'
-    templateUrl: 'app/minutes/minutes.html'
+    templateUrl: 'app/minutes/minutes-list-mine.html'
+    authenticate: true

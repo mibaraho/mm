@@ -8,11 +8,12 @@ var MinuteSchema = new Schema({
   location: String,
   date: { type : Date, default: Date.now },
   info: String,
-  author: { type: mongoose.Schema.Types.ObjectId, ref: 'User ' },
+  author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  organization: { type: mongoose.Schema.Types.ObjectId, ref: 'Organization' },
   elements: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User ' }],
-  state: { type : String,  default: 'created' },
-  folder: { type : String,  default: 'inbox' },
-  active: { type : Boolean,  default: true }
+  state: { type : String, default: 'created' },
+  folder: { type : String, default: 'inbox' },
+  active: { type : Boolean, default: true }
 });
 
 module.exports = mongoose.model('Minute', MinuteSchema);

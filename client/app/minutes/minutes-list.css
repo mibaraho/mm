@@ -28,3 +28,12 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+.tile-footer {
+    padding: 0px 15px !important;
+}
+.tile-footer > div{
+    padding: 15px !important;
+}
+.tile-footer p  {
+  display: inline !important;
+}

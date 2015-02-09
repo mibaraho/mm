@@ -7,3 +7,4 @@ angular.module 'mmApp'
     url: '/others'
     controller: 'MinutesListOthersCtrl'
     templateUrl: 'app/minutes/minutes.html'
+    authenticate: true

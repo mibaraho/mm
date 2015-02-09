@@ -11178,5 +11178,7 @@ hr.line-full {
   100% {
     transform: translateZ(0) rotateY(0deg);
     opacity: 1; } }
-
+.social-login ul li {
+  margin-right: 5px;
+}
 /*# sourceMappingURL=theme.css.map */

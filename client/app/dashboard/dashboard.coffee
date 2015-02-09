@@ -7,3 +7,4 @@ angular.module 'mmApp'
     url: '/dashboard'
     controller: 'DashboardCtrl'
     templateUrl: 'app/dashboard/dashboard.html'
+    authenticate: true
