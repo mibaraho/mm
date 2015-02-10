@@ -9,3 +9,11 @@ angular.module('mmApp').controller 'MinutesListMineCtrl', ($scope, $http) ->
     name: 'Work meeting for new idea'
     location: 'Clients office'
     info: 'This meeting talks about how can we get more done in less time...'
+    date: '2014-11-11'
+  $scope.open = ($event) ->
+    $event.preventDefault()
+    $event.stopPropagation()
+    $scope.opened = true
+  #Readonly
+  $scope.disabled = (date, mode) ->
+    mode == 'day' and (date.getDay() >=0)

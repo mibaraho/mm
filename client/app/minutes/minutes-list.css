@@ -28,12 +28,23 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+.tile-widget {
+  padding: 5px !important;
+}
+
 .tile-footer {
     padding: 0px 15px !important;
 }
 .tile-footer > div{
-    padding: 15px !important;
+    padding: 0px !important;
 }
 .tile-footer p  {
   display: inline !important;
+}
+.card-container .card {
+  margin: 0px !important;
+  min-height:0px !important;
+}
+.card-container .card .front {
+  padding: 15px !important;
 }

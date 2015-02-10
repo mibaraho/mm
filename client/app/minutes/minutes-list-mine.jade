@@ -141,7 +141,24 @@
           //tile header
           // tile widget
           .tile-widget
-            p ...{{meetingMinute.info}}
+            // row
+            .row
+              // col
+              .col-md-6
+                .input-group
+                  .input-group-addon 
+                    i.fa.fa-map-marker
+                  label.form-control Client's office
+              // /col
+              // col
+              .col-md-6
+                p.input-group
+                  input.form-control(type='text', datepicker-popup='dd-MM-yyyy', is-open='opened', show-button-bar="false", ng-model='meetingMinute.date', date-disabled='disabled(date, mode)', close-text='Close', disabled='disabled')
+                  span.input-group-btn
+                    button.btn.btn-default(type='button', ng-click='open($event)')
+                      i.fa.fa-calendar
+              // /col
+            // /row
           // /tile widget
           // tile body
           .tile-body
@@ -149,18 +166,42 @@
           // /tile body
           // tile footer
           .tile-footer.row
-            .col-xs-3.text-center.bg-greensea
-              p.text-elg.text-strong.mb-0 4
-              i.fa.fa-users.fa-2x
-            .col-xs-3.text-center.front.bg-lightred
-              p.text-elg.text-strong.mb-0 1
-              i.fa.fa-thumbs-up.fa-2x
-            .col-xs-3.bg-slategray
-              p.text-elg.text-strong.mb-0 1
-              i.fa.fa-calendar.fa-2x
-            .col-xs-3.text-center.bg-blue
-              p.text-elg.text-strong.mb-0 12
-              i.fa.fa-comments.fa-2x
+            .col-xs-3.text-center
+              .card-container
+                .card
+                  .front.bg-greensea
+                    p.text-elg.text-strong.mb-0 4
+                    i.fa.fa-users.fa-2x
+                  .back.bg-greensea
+                    p.text-elg.text-strong.mb-0 4
+                    i.fa.fa-users.fa-2x
+            .col-xs-3.text-center
+              .card-container
+                .card
+                  .front.front.bg-lightred
+                    p.text-elg.text-strong.mb-0 4
+                    i.fa.fa-thumbs-up.fa-2x
+                  .back.front.bg-lightred
+                    p.text-elg.text-strong.mb-0 4
+                    i.fa.fa-thumbs-up.fa-2x
+            .col-xs-3
+              .card-container
+                .card
+                  .front.front.bg-slategray
+                    p.text-elg.text-strong.mb-0 4
+                    i.fa.fa-bullseye.fa-2x
+                  .back.front.bg-slategray
+                    p.text-elg.text-strong.mb-0 4
+                    i.fa.fa-bullseye.fa-2x
+            .col-xs-3.text-center
+              .card-container
+                .card
+                  .front.front.bg-blue
+                    p.text-elg.text-strong.mb-0 4
+                    i.fa.fa-comments.fa-2x
+                  .back.front.bg.bg-blue
+                    p.text-elg.text-strong.mb-0 4
+                    i.fa.fa-comments.fa-2x
           // /tile footer
         // /tile
       // /col
