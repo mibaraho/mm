@@ -1,0 +1,29 @@
+#General comments:
+#/o stands for organization. A tenant. A client.
+
+#List all the users in an organization:
+/o/:id/users
+
+#List all invitations in an organization
+/o/:id/invitations
+
+#List of all clients of an organization:
+/o/:id/clients
+
+#List of all projects/initiatives for every client
+/o/:idOrganization/clients/:idClient/projects
+
+#List of all projects/initiatives in the organization
+/o/:id/projects
+
+#List of all meeting minutes in a project
+/o/:idOrganization/projects/:idProject/meeting-minutes
+
+#A project meeting timeline
+/o/:idOrganization/projects/:idProject/timeline
+
+#A meeting minute detail
+/o/:idOrganization/meeting-minutes/:idMeeting
+
+
+

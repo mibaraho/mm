@@ -1,0 +1,244 @@
+meetings[0]
+  _id = 3a08278f-f88b-4afa-8a4c-5df4d8872f02
+  name = Kickoff meeting
+  date d = 2014-12-01 11:45
+  location = Client's office, 440 N. Wolfe Rd. - Sunnyvale, CA 94085
+  brief = The meeting aimed to launch the project showing the client how the default configuration works.
+  author
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[0]
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[1]
+    _id = 88bb884c-9893-4264-9040-393ee56065cf
+    fullName = Rodrigo Dueñas
+    email = rduenasf@gmail.com
+    profilePictureUrl = /path/to/pictures/2d704828-7971-41e6-8a75-567b6e403142.png
+  attendees[2]
+    _id = 507cf739-140a-48f4-8bd6-97d5dc66707f
+    fullName = Andrés Gómez
+    email = agomez@gmail.com
+  highlights
+    commitments n = 4
+    comments n = 6
+    alerts n = 2
+    notes n= 6
+  keywords[0]
+    keyword = kickoff
+  keywords[1]
+    keyword = commitment
+  keywords[2]
+    keyword = launch
+meetings[1]
+  _id = 59de0bc3-7540-48cd-a889-e5f0387ab192
+  name = Special requirements definition
+  date d = 2014-12-08 11:45
+  brief = In this meeting the client gave the definition to customize the solution to their needs
+  author
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[0]
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[1]
+    _id = 507cf739-140a-48f4-8bd6-97d5dc66707f
+    fullName = Andrés Gómez
+    email = agomez@gmail.com
+  highlights
+    commitments n = 3
+    comments n = 3
+    alerts n = 5
+    notes n= 2
+  keywords[0]
+    keyword = question
+  keywords[1]
+    keyword = product
+meetings[2]
+  _id = adfac741-c679-4c7c-9746-4e25916f0d9c
+  name = Implementation planning and definition
+  date d = 2014-12-20 11:45
+  brief = In this meeting the team shared the implementation plan
+  location = Starbucks, Apoquindo 6094, Santiago
+  author
+    _id = 88bb884c-9893-4264-9040-393ee56065cf
+    fullName = Rodrigo Dueñas
+    email = rduenasf@gmail.com
+    profilePictureUrl = /path/to/pictures/2d704828-7971-41e6-8a75-567b6e403142.png
+  attendees[0]
+    _id = 88bb884c-9893-4264-9040-393ee56065cf
+    fullName = Rodrigo Dueñas
+    email = rduenasf@gmail.com
+    profilePictureUrl = /path/to/pictures/2d704828-7971-41e6-8a75-567b6e403142.png
+  attendees[1]
+    _id = 507cf739-140a-48f4-8bd6-97d5dc66707f
+    fullName = Andrés Gómez
+    email = agomez@gmail.com
+  highlights
+    commitments n = 1
+    comments n = 2
+    alerts n = 3
+    notes n= 4
+  keywords[0]
+    keyword = Gantt chart
+  keywords[1]
+    keyword = Due date
+  keywords[2]
+    keyword = Effort
+meetings[3]
+  _id = 0051b231-8f3f-46dc-baae-9e51fb2d41b9
+  name = First demostration
+  date d = 2014-12-27 11:45
+  brief = First demostration of the product considering most of the customizations
+  location = Client's office, 440 N. Wolfe Rd. - Sunnyvale, CA 94085
+  author
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[0]
+    _id = 88bb884c-9893-4264-9040-393ee56065cf
+    fullName = Rodrigo Dueñas
+    email = rduenasf@gmail.com
+    profilePictureUrl = /path/to/pictures/2d704828-7971-41e6-8a75-567b6e403142.png
+  attendees[1]
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[2]
+    _id = 507cf739-140a-48f4-8bd6-97d5dc66707f
+    fullName = Andrés Gómez
+    email = agomez@gmail.com
+  highlights
+    commitments n = 7
+    comments n = 5
+    alerts n = 8
+    notes n= 3
+  keywords[0]
+    keyword = Feedback
+  keywords[1]
+    keyword = Comment
+  keywords[2]
+    keyword = Color
+meetings[4]
+  _id = b5be9fd1-0dd2-4fe2-967b-90b842ed7bfd
+  name = Final feedback and release plan
+  date d = 2015-01-05 11:45
+  brief = Final details, considering mainly user interface and colors
+  location = Client's office, 440 N. Wolfe Rd. - Sunnyvale, CA 94085
+  author
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[0]
+    _id = 88bb884c-9893-4264-9040-393ee56065cf
+    fullName = Rodrigo Dueñas
+    email = rduenasf@gmail.com
+    profilePictureUrl = /path/to/pictures/2d704828-7971-41e6-8a75-567b6e403142.png
+  attendees[1]
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[2]
+    _id = 507cf739-140a-48f4-8bd6-97d5dc66707f
+    fullName = Andrés Gómez
+    email = agomez@gmail.com
+  attendees[3]
+    _id = 9e0a34c8-d21b-409b-8f45-21e0e3828226
+    fullName = Felipe Peirano
+    email = peirano@gmail.com
+  highlights
+    commitments n = 5
+    comments n = 8
+    alerts n = 2
+    notes n= 1
+  keywords[0]
+    keyword = Feedback
+  keywords[1]
+    keyword = Release plan
+  keywords[2]
+    keyword = Details
+meetings[5]
+  _id = 24edc93f-a0fe-47d6-802e-9cd9c625db61
+  name = Release approval and test
+  date d = 2015-01-18 11:45
+  brief = Full demostration in staging environment
+  location = Client's office, 440 N. Wolfe Rd. - Sunnyvale, CA 94085
+  author
+    _id = 88bb884c-9893-4264-9040-393ee56065cf
+    fullName = Rodrigo Dueñas
+    email = rduenasf@gmail.com
+    profilePictureUrl = /path/to/pictures/2d704828-7971-41e6-8a75-567b6e403142.png
+  attendees[0]
+    _id = 88bb884c-9893-4264-9040-393ee56065cf
+    fullName = Rodrigo Dueñas
+    email = rduenasf@gmail.com
+    profilePictureUrl = /path/to/pictures/2d704828-7971-41e6-8a75-567b6e403142.png
+  attendees[1]
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[2]
+    _id = 507cf739-140a-48f4-8bd6-97d5dc66707f
+    fullName = Andrés Gómez
+    email = agomez@gmail.com
+  highlights
+    commitments n = 1
+    comments n = 1
+    alerts n = 1
+    notes n= 7
+  keywords[0]
+    keyword = final
+  keywords[1]
+    keyword = feedback
+  keywords[2]
+    keyword = detail
+meetings[6]
+  _id = 464047c2-bd6d-4a20-aa89-55819b13d2ac
+  name = Closing meeting
+  date d = 2015-01-29 11:45
+  brief = Closing meeting to deliver the project
+  location = Client's office, 440 N. Wolfe Rd. - Sunnyvale, CA 94085
+  author
+    _id = 88bb884c-9893-4264-9040-393ee56065cf
+    fullName = Rodrigo Dueñas
+    email = rduenasf@gmail.com
+    profilePictureUrl = /path/to/pictures/2d704828-7971-41e6-8a75-567b6e403142.png
+  attendees[0]
+    _id = 88bb884c-9893-4264-9040-393ee56065cf
+    fullName = Rodrigo Dueñas
+    email = rduenasf@gmail.com
+  attendees[1]
+    _id = df1140a1-084b-4465-babb-29933411a07e
+    fullName = Matías Barahona
+    email = mibaraho@gmail.com
+    profilePictureUrl = /path/to/pictures/0a991e6e-60eb-4b1f-9e06-81cbd49af74c.png
+  attendees[2]
+    _id = 507cf739-140a-48f4-8bd6-97d5dc66707f
+    fullName = Andrés Gómez
+    email = agomez@gmail.com
+  highlights
+    commitments n = 0
+    comments n = 6
+    alerts n = 0
+    notes n= 0
+  keywords[0]
+    keyword = End
+  keywords[1]
+    keyword = Finished
+  keywords[2]
+    keyword = Done
+  keywords[2]
+    keyword = Thanks

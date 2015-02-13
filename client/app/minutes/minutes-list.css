@@ -31,6 +31,9 @@
 .tile-widget {
   padding: 5px !important;
 }
+.tile-body {
+  padding: 5px !important;
+}
 
 .tile-footer {
     padding: 0px 15px !important;
