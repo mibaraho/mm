@@ -3,7 +3,7 @@
 angular.module 'mmApp'
 .config ($stateProvider) ->
   $stateProvider
-  .state 'main.minutes.timeline',
+  .state 'main.timeline',
     url: '/timeline'
     controller: 'MinuteTimelineCtrl'
     templateUrl: 'app/minutes/minute-timeline.html'
