@@ -1,0 +1,18 @@
+#Element defs
+
+Name: Comment
+Description: A comment is something that someone said
+Has: Owner, Text
+
+Name: Note
+Description: A note from the author.
+Has: Text
+
+Name: Issue
+Description: Used when someone make a clear statement about a risk that can impact in the result of a goal or task.
+Has: Owner, Text
+
+Name: Commitment
+Description: Used when someone has a responsability to acomplish in a certain timeframe
+Has: Assigned, text, due date, reminder
+
