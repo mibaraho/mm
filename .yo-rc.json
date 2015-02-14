@@ -10,7 +10,7 @@
     "socketsNeedle": "// Insert sockets below",
     "filters": {
       "coffee": true,
-      "jade": true,
+      "jade": false,
       "css": true,
       "uirouter": true,
       "bootstrap": true,

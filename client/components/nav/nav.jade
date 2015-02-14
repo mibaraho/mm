@@ -3,7 +3,7 @@
     accordion(close-others='oneAtTime', slimscroll="{height: '100%'}")
       accordion-group(is-open='status.isFirstOpen', ng-class="{'open': status.isFirstOpen, 'closed': !status.isFirstOpen}")
         accordion-heading
-          | Navigation 
+          | Navigation
           i.fa(ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}")
         ul#navigation(nav-collapse='', ripple='')
           li(ui-sref-active='active')
@@ -11,7 +11,7 @@
               i.fa.fa-dashboard
               span Dashboard
           li.dropdown.list-unstyled(on-toggle='toggled(open)', ui-sref-active='active', ng-class="{'open':$state.includes('main.minutes')}")
-            a(ui-sref='main.minutes')
+            a(ui-sref='main.minutes' ng-click="caca()")
               i.fa.fa-briefcase
               span Minutes
             ul

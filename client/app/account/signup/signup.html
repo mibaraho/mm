@@ -1,0 +1,40 @@
+
+<div class="page page-core page-login">
+  <div class="text-center">
+    <h3 class="text-light text-white"><span class="text-lightred">M</span>M</h3>
+    <div class="container w-420 p-15 bg-white mt-40 text-center">
+      <h2 class="text-light text-greensea">Sign Up</h2>
+      <form name="form" ng-submit="register(form)" novalidate="" class="form-validation mt-20">
+        <p class="help-block text-left">Enter your personal details below:</p>
+        <div class="form-group">
+          <input type="text" placeholder="Full Name" ng-model="user.name" required="" class="form-control underline-input"/>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email" ng-model="user.email" required="" class="form-control underline-input"/>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" ng-model="user.password" required="" class="form-control underline-input"/>
+        </div>
+        <div class="form-group text-left">
+          <label class="checkbox checkbox-custom checkbox-custom-sm inline-block">
+            <input type="checkbox" ng-model="user.accept" required=""/><i></i> I agree to the <a href="javascript:;">Terms of Service</a> &amp; <a href="javascript:;">Privacy Policy</a>
+          </label>
+        </div>
+        <div class="bg-slategray lt wrap-reset mt-20 text-left">
+          <p class="m-0">
+            <button type="submit" ng-disabled="form.$invalid" class="btn btn-greensea b-0 text-uppercase pull-right">Register</button><a ui-sref="login" class="btn btn-lightred b-0 text-uppercase">Login</a>
+            <div class="social-login text-left"><br/>
+              <ul class="pull-right list-unstyled list-inline">
+                <li class="p-0"><a href="javascript:;" ng-click="loginOauth(&quot;facebook&quot;)" class="btn btn-sm btn-primary b-0 btn-rounded-20"><i class="fa fa-facebook"></i>&#x9;&#x9;&#x9;&#x9;</a></li>
+                <li class="p-0"><a href="javascript:;" ng-click="loginOauth(&quot;twitter&quot;)" class="btn btn-sm btn-info b-0 btn-rounded-20"><i class="fa fa-twitter"></i>&#x9;&#x9;&#x9;&#x9;</a></li>
+                <li class="p-0"><a href="javascript:;" ng-click="loginOauth(&quot;google&quot;)" class="btn btn-sm btn-lightred b-0 btn-rounded-20"><i class="fa fa-google-plus"></i>&#x9;&#x9;&#x9;&#x9;</a></li>
+                <li class="p-0"><a href="javascript:;" class="btn btn-sm btn-primary b-0 btn-rounded-20"><i class="fa fa-linkedin"></i>&#x9;&#x9;&#x9;</a></li>
+              </ul>
+            </div>
+          </p>
+          <h5>Or signup with</h5>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

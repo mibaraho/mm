@@ -1,0 +1,39 @@
+
+<div id="sidebar-wrap" ng-controller="NavCtrl">
+  <div class="slimScrollDiv">
+    <accordion close-others="oneAtTime" slimscroll="{height: '100%'}">
+      <accordion-group is-open="status.isFirstOpen" ng-class="{'open': status.isFirstOpen, 'closed': !status.isFirstOpen}">
+        <accordion-heading>Navigation<i ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}" class="fa"></i></accordion-heading>
+        <ul id="navigation" nav-collapse="" ripple="">
+          <li ui-sref-active="active"><a ui-sref="main.dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+          <li on-toggle="toggled(open)" ui-sref-active="active" ng-class="{'open':$state.includes('main.minutes')}" class="dropdown list-unstyled"><a ui-sref="main.minutes" ng-click="caca()"><i class="fa fa-briefcase"></i><span>Minutes</span></a>
+            <ul>
+              <li ui-sref-active="active"><a ui-sref="main.minutes.list-mine"><i class="fa fa-caret-right"></i> Authored by me</a></li>
+              <li ui-sref-active="active"><a ui-sref="main.minutes.list-others"><i class="fa fa-caret-right"></i> By others</a></li>
+            </ul>
+          </li>
+          <li on-toggle="toggled(open)" ui-sref-active="active" ng-class="{'open':$state.includes('main.actions')}" class="dropdown list-unstyled"><a ui-sref="main.actions"><i class="fa fa-briefcase"></i><span>Actions</span></a>
+            <ul>
+              <li ui-sref-active="active"><a ui-sref="main.actions.list-mine"><i class="fa fa-caret-right"></i> Authored by me</a></li>
+              <li ui-sref-active="active"><a ui-sref="main.actions.list-others"><i class="fa fa-caret-right"></i> By others</a></li>
+            </ul>
+          </li>
+          <li on-toggle="toggled(open)" ng-class="{'open':$state.includes('main.reminders')}" class="dropdown list-unstyled"><a ui-sref="main.reminders"><i class="fa fa-briefcase"></i><span>Reminders</span></a>
+            <ul>
+              <li ui-sref-active="active"><a ui-sref="main.reminders.list-mine"><i class="fa fa-caret-right"></i> My reminders</a></li>
+              <li ui-sref-active="active"><a ui-sref="main.reminders.list-others"><i class="fa fa-caret-right"></i> By others</a></li>
+            </ul>
+          </li>
+          <li on-toggle="toggled(open)" ui-sref-active="active" ng-class="{'open':$state.includes('main.admin')}" class="dropdown list-unstyled"><a ui-sref="main.admin"><i class="fa fa-cog"></i><span>Administration</span></a>
+            <ul>
+              <li ui-sref-active="active"><a ui-sref="main.admin.templates"><i class="fa fa-caret-right"></i> Templates</a></li>
+              <li ui-sref-active="active"><a ui-sref="main.admin.users"><i class="fa fa-caret-right"></i> Users</a></li>
+              <li ui-sref-active="active"><a ui-sref="main.admin.visibility"><i class="fa fa-caret-right"></i> Visibility</a></li>
+              <li ui-sref-active="active"><a ui-sref="main.admin.account"><i class="fa fa-caret-right"></i> Account</a></li>
+            </ul>
+          </li>
+        </ul>
+      </accordion-group>
+    </accordion>
+  </div>
+</div>

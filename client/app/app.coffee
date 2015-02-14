@@ -9,8 +9,7 @@ angular.module 'mmApp', [
   'ui.bootstrap'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
-  $urlRouterProvider
-  .otherwise '/dashboard'
+  $urlRouterProvider.otherwise '/dashboard'
   $httpProvider.interceptors.push 'authInterceptor'
 
 
