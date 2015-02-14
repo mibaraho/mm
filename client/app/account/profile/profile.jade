@@ -1,0 +1,411 @@
+.page.page-profile
+  // page header
+  .pageheader
+    h2
+      | {{page.title}} 
+      span // {{page.subtitle}}
+    .page-bar
+      ul.page-breadcrumb
+        li
+          a(ui-sref='app.dashboard')
+            i.fa.fa-home
+            |  {{main.title}}
+        li
+          a(href='javascript:;') Profile
+        li
+          a(ui-sref='app.pages.profile') {{page.title}}
+  // /page header
+  // page content
+  .pagecontent
+    // row
+    .row
+      // col
+      .col-md-4
+        // tile
+        section.tile.tile-simple
+          // tile widget
+          .tile-widget.p-30.text-center
+            .thumb.thumb-xl
+              img.img-circle(src='assets/images/arnold-avatar.jpg', alt='')
+            h4.mb-0
+              strong John
+              |  Douey
+            span.text-muted Project Manager
+            .mt-10
+              button.btn.btn-rounded-20.btn-sm.btn-greensea Follow
+              button.btn.btn-rounded-20.btn-sm.btn-lightred Message
+          // /tile widget
+          // tile body
+          .tile-body.text-center.bg-blue.p-0
+            ul.list-inline.tbox.m-0
+              li.tcol.p-10
+                h2.m-0 695
+                span.text-transparent-white Tweets
+              li.tcol.bg-blue.dker.p-10
+                h2.m-0 1 269
+                span.text-transparent-white Followers
+              li.tcol.p-10
+                h2.m-0 369
+                span.text-transparent-white Following
+          // /tile body
+        // /tile
+        // tile
+        section.tile.tile-simple
+          // tile header
+          .tile-header
+            h1.custom-font
+              strong Friend
+              |  List
+          // /tile header
+          // tile body
+          .tile-body
+            .media
+              .pull-left.thumb
+                img.media-object.img-circle(src='assets/images/random-avatar5.jpg', alt='')
+              .pull-right.mt-10
+                button.btn.btn-rounded-20.btn-default.btn-sm.mr-5(type='button', style='width:30px;')
+                  i.fa.fa-times
+                button.btn.btn-rounded-20.btn-default.btn-sm.mr-5(type='button', style='width:30px;')
+                  i.fa.fa-pencil
+                button.btn.btn-rounded-20.btn-default.btn-sm(type='button', style='width:30px;')
+                  i.fa.fa-eye(style='margin-left: -2px;')
+              .media-body
+                p.media-heading.mb-0.mt-10
+                  | Roger 
+                  strong Flopple
+                small.text-lightred Manager
+            hr
+            .media
+              .pull-left.thumb
+                img.media-object.img-circle(src='assets/images/random-avatar4.jpg', alt='')
+              .pull-right.mt-10
+                button.btn.btn-rounded-20.btn-default.btn-sm.mr-5(type='button', style='width:30px;')
+                  i.fa.fa-times
+                button.btn.btn-rounded-20.btn-default.btn-sm.mr-5(type='button', style='width:30px;')
+                  i.fa.fa-pencil
+                button.btn.btn-rounded-20.btn-default.btn-sm(type='button', style='width:30px;')
+                  i.fa.fa-eye(style='margin-left: -2px;')
+              .media-body
+                p.media-heading.mb-0.mt-10
+                  | Deel 
+                  strong McApple
+                    small.text-lightred Print master
+            hr
+            .media
+              .pull-left.thumb
+                img.media-object.img-circle(src='assets/images/random-avatar8.jpg', alt='')
+              .pull-right.mt-10
+                button.btn.btn-rounded-20.btn-default.btn-sm.mr-5(type='button', style='width:30px;')
+                  i.fa.fa-times
+                button.btn.btn-rounded-20.btn-default.btn-sm.mr-5(type='button', style='width:30px;')
+                  i.fa.fa-pencil
+                button.btn.btn-rounded-20.btn-default.btn-sm(type='button', style='width:30px;')
+                  i.fa.fa-eye(style='margin-left: -2px;')
+              .media-body
+                p.media-heading.mb-0.mt-10
+                  | Anna 
+                  strong Opichia
+                    small.text-lightred lead designer
+            hr
+            .media
+              .pull-left.thumb
+                img.media-object.img-circle(src='assets/images/random-avatar7.jpg', alt='')
+              .pull-right.mt-10
+                button.btn.btn-rounded-20.btn-default.btn-sm.mr-5(type='button', style='width:30px;')
+                  i.fa.fa-times
+                button.btn.btn-rounded-20.btn-default.btn-sm.mr-5(type='button', style='width:30px;')
+                  i.fa.fa-pencil
+                button.btn.btn-rounded-20.btn-default.btn-sm(type='button', style='width:30px;')
+                  i.fa.fa-eye(style='margin-left: -2px;')
+              .media-body
+                p.media-heading.mb-0.mt-10
+                  | Bobby 
+                  strong Socks
+                small.text-lightred CEO
+          // /tile body
+        // /tile
+        // tile
+        section.tile.tile-simple
+          // tile header
+          .tile-header
+            h1.custom-font
+              strong My
+              |  Projects
+          // /tile header
+          // tile body
+          .tile-body
+            ul.list-unstyled
+              li
+                .row
+                  .col-md-3
+                    | Minimal
+                  .col-md-9
+                    progressbar.progress-striped.not-rounded(value='56', type='warning') 56%
+              li
+                .row
+                  .col-md-3
+                    | Minoral
+                  .col-md-9
+                    progressbar.progress-striped.not-rounded(value='90', type='blue') 90%
+              li
+                .row
+                  .col-md-3
+                    | The Kamarel
+                  .col-md-9
+                    progressbar.progress-striped.not-rounded(value='36', type='greensea') 36%
+              li
+                .row
+                  .col-md-3
+                    | Themeforest
+                  .col-md-9
+                    progressbar.progress-striped.not-rounded(value='8', type='danger') 8%
+          // /tile body
+        // /tile
+      // /col
+      // col
+      .col-md-8
+        // tile
+        section.tile.tile-simple
+          // tile body
+          .tile-body.p-0
+            tabset.tabs-dark
+              tab(heading='Feed')
+                .wrap-reset
+                  .streamline.mt-20
+                    article.streamline-post
+                      aside
+                        .thumb.thumb-sm
+                          img.img-circle(src='assets/images/profile-photo.jpg', alt='')
+                      .post-container
+                        .panel.panel-default
+                          .panel-heading.bg-white
+                            | John Douey 
+                            small.text-muted posted a new status
+                            span.text-muted.pull-right
+                              i.fa.fa-clock-o.mr-5
+                              |  Just now
+                          .panel-body
+                            | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
+                            p.mt-10.mb-0
+                              a.btn.btn-default.btn-xs.active(href='', active-toggle='')
+                                i.fa.fa-heart-o.text-inactive
+                                i.fa.fa-heart.text-danger.text-active
+                                |  Like (14)
+                              a.btn.btn-default.btn-xs(href='')
+                                i.fa.fa-comments
+                                |  Comments (30)
+                              a.btn.btn-default.btn-xs(href='')
+                                i.fa.fa-mail-reply
+                                |  Reply
+                        ul.list-unstyled.post-replies
+                          li
+                            aside
+                              .thumb.thumb-sm
+                                img.img-circle(src='assets/images/random-avatar4.jpg', alt='')
+                            .reply-container
+                              .panel.panel-default
+                                .panel-body
+                                  p
+                                    strong James Bend
+                                    span.text-muted.pull-right
+                                      i.fa.fa-clock-o.mr-5
+                                      |  6 minutes ago
+                                  p.mb-0.text-small These cases are perfectly simple and easy to distinguish.
+                                  p.mt-10.mb-0
+                                    a.btn.btn-default.btn-xs(href='', active-toggle='')
+                                      i.fa.fa-heart-o.text-inactive
+                                      i.fa.fa-heart.text-danger.text-active
+                                      |  Like (5)
+                                    a.btn.btn-default.btn-xs(href='')
+                                      i.fa.fa-mail-reply
+                                      |  Reply
+                          li
+                            aside
+                              .thumb.thumb-sm
+                                img.img-circle(src='assets/images/ici-avatar.jpg', alt='')
+                            .reply-container
+                              .panel.panel-default
+                                .panel-body
+                                  p
+                                    strong Ing. Imrich Kamarel
+                                    span.text-muted.pull-right
+                                      i.fa.fa-clock-o.mr-5
+                                      |  50 minutes ago
+                                  p.mb-0.text-small
+                                    | In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best.
+                                  p.mt-10.mb-0
+                                    a.btn.btn-default.btn-xs.active(href='', active-toggle='')
+                                      i.fa.fa-heart-o.text-inactive
+                                      i.fa.fa-heart.text-danger.text-active
+                                      |  Like
+                                    a.btn.btn-default.btn-xs(href='')
+                                      i.fa.fa-mail-reply
+                                      |  Reply
+                          li
+                            aside
+                              .thumb.thumb-sm
+                                img.img-circle(src='assets/images/arnold-avatar.jpg', alt='')
+                            .reply-container
+                              .panel.panel-default
+                                .panel-body
+                                  p
+                                    strong Arnold Karlsberg
+                                    span.text-muted.pull-right
+                                      i.fa.fa-clock-o.mr-5
+                                      |  56 minutes ago
+                                  p.mb-0.text-small
+                                    | But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.
+                                  p.mt-10.mb-0
+                                    a.btn.btn-default.btn-xs(href='', active-toggle='')
+                                      i.fa.fa-heart-o.text-inactive
+                                      i.fa.fa-heart.text-danger.text-active
+                                      |  Like (2)
+                                    a.btn.btn-default.btn-xs(href='')
+                                      i.fa.fa-mail-reply
+                                      |  Reply
+              tab(heading='Settings')
+                .wrap-reset
+                  form.profile-settings
+                    .row
+                      .form-group.col-md-12.legend
+                        h4
+                          strong Personal
+                          |  Settings
+                        p Your personal account settings
+                    .row
+                      .form-group.col-sm-6
+                        label(for='first-name') First Name
+                        input#first-name.form-control(type='text', value='John')
+                      .form-group.col-sm-6
+                        label(for='last-name') Last Name
+                        input#last-name.form-control(type='text', value='Douey')
+                    .row
+                      .form-group.col-sm-6
+                        label(for='address1') Address Line 1
+                        input#address1.form-control(type='text', value='Vajnorska 215')
+                      .form-group.col-sm-6
+                        label(for='address2') Address Line 2
+                        input#address2.form-control(type='text', value='IBM Tower, floor #32')
+                    .row
+                      .form-group.col-sm-4
+                        label(for='city') City
+                        input#city.form-control(type='text', value='Bratislava')
+                      .form-group.col-sm-4
+                        label(for='state') State/Provice
+                        input#state.form-control(type='text', value='Bratislava')
+                      .form-group.col-sm-4
+                        label(for='zip') Zip Code
+                        input#zip.form-control(type='text', value='215 62')
+                    .row
+                      .form-group.col-sm-6
+                        label(for='email') E-mail
+                        input#email.form-control(type='email', value='johny.d@tattek.com', readonly='')
+                      .form-group.col-sm-6
+                        label(for='country') Country
+                        select#country(ui-jq='chosen', ui-options="{width: '100%'}")
+                          option Slovakia
+                          option Czech Republic
+                          option Poland
+                          option Hungary
+                          option Austria
+                    .row
+                      .form-group.col-sm-6
+                        label(for='phone') Phone
+                        input#phone.form-control(type='text', value='+(421) 903 669 478')
+                        span.help-block +(421) 999 999 999
+                      .form-group.col-sm-6
+                        label(for='avatar') Avatar
+                        input#avatar.filestyle(ui-jq='filestyle', type='file', ui-options="{\
+                        buttonText: 'Find file',\
+                        iconName: 'fa fa-inbox'\
+                        }")
+                        span.help-block Allowed files: gif, png, jpg. Max file size 1Mb
+                    .row
+                      .form-group.col-sm-6
+                        label(for='website') Website
+                        input#website.form-control(type='text', value='http://tattek.com/minimal')
+                      .form-group.col-sm-6
+                        label(for='bio') Bio
+                        textarea#bio.form-control(rows='4')
+                          | But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                    .row
+                      .form-group.col-md-12.legend
+                        h4
+                          strong Social
+                          |  Settings
+                        p Connect with your social profiles
+                    .row
+                      .form-group.col-sm-6
+                        label(for='facebook') Facebook
+                        input#facebook.form-control(type='text')
+                      .form-group.col-sm-6
+                        label(for='google-plus') Google+
+                        input#google-plus.form-control(type='text')
+                    .row
+                      .form-group.col-sm-6
+                        label(for='pinterest') Pinterest
+                        input#pinterest.form-control(type='text')
+                      .form-group.col-sm-6
+                        label(for='flickr') Flickr
+                        input#flickr.form-control(type='text')
+                    .row
+                      .form-group.col-sm-6
+                        label(for='dribbble') Dribbble
+                        input#dribbble.form-control(type='text')
+                      .form-group.col-sm-6
+                        label(for='github') GitHub
+                        input#github.form-control(type='text')
+                    .row
+                      .form-group.col-md-12.legend
+                        h4
+                          strong Security
+                          |  Settings
+                        p Secure your account
+                    .row
+                      .form-group.col-sm-6
+                        label(for='username') Username
+                        input#username.form-control(type='text', value='Johny.d', readonly='')
+                      .form-group.col-sm-6
+                        label(for='password') Current Password
+                        input#password.form-control(type='password', value='secretpassword', readonly='')
+                    .row
+                      .form-group.col-sm-6
+                        label(for='new-password') New Password
+                        input#new-password.form-control(type='password')
+                      .form-group.col-sm-6
+                        label(for='new-password-repeat') New Password Repeat
+                        input#new-password-repeat.form-control(type='password')
+                    .row
+                      .form-group.col-sm-6
+                        label Profile Visibility:
+                        label.checkbox.checkbox-custom
+                          input(name='optionsRadios', type='radio', checked='')
+                          i
+                          |  For Everyone
+                        label.checkbox.checkbox-custom
+                          input(name='optionsRadios', type='radio')
+                          i
+                          |  For Friends
+                        label.checkbox.checkbox-custom
+                          input(name='optionsRadios', type='radio')
+                          i
+                          |  Hidden for Everyone
+                      .form-group.col-sm-6
+                        label Notifications:
+                        label.checkbox.checkbox-custom
+                          input(type='checkbox', checked='')
+                          i
+                          |  New task notifications
+                        label.checkbox.checkbox-custom
+                          input(type='checkbox', checked='')
+                          i
+                          |  New friend request notifications
+                        label.checkbox.checkbox-custom
+                          input(type='checkbox')
+                          i
+                          |  New message nofifications
+          // /tile body
+        // /tile
+      // /col
+    // /row
+  // /page content
