@@ -80,12 +80,6 @@ module.exports = function (grunt) {
         ],
         tasks: ['newer:jshint:all', 'karma']
       },
-      jade: {
-        files: [
-          '<%= yeoman.client %>/{app,components}/*',
-          '<%= yeoman.client %>/{app,components}/**/*.jade'],
-        tasks: ['jade']
-      },
       coffee: {
         files: [
           '<%= yeoman.client %>/{app,components,directives}/**/*.{coffee,litcoffee,coffee.md}',
@@ -414,11 +408,9 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'coffee',
-        'jade',
       ],
       test: [
         'coffee',
-        'jade',
       ],
       debug: {
         tasks: [
@@ -431,7 +423,6 @@ module.exports = function (grunt) {
       },
       dist: [
         'coffee',
-        'jade',
         'imagemin',
         'svgmin'
       ]
@@ -473,26 +464,6 @@ module.exports = function (grunt) {
         NODE_ENV: 'production'
       },
       all: localConfig
-    },
-
-    // Compiles Jade to html
-    jade: {
-      compile: {
-        options: {
-          data: {
-            debug: false
-          }
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.client %>',
-          src: [
-            '{app,components}/**/*.jade'
-          ],
-          dest: '.tmp',
-          ext: '.html'
-        }]
-      }
     },
 
     // Compiles CoffeeScript to JavaScript

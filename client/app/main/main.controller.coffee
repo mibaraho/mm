@@ -12,3 +12,6 @@ angular.module 'mmApp'
       headerFixed: true
       asideFixed: true
       rightbarShow: false
+
+  $scope.caca = ->
+    alert('asdf')
