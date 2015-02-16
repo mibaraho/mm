@@ -1,0 +1,132 @@
+.page.page-tiles
+  .pageheader
+    h2
+      | {{page.title}} 
+      span // {{page.subtitle}}
+    .page-bar
+      ul.page-breadcrumb
+        li
+          a(ui-sref='main.dashboard')
+            i.fa.fa-home
+            |  {{main.title}}
+        li
+          a(ui-sref='main.minutes.list') {{page.title}}
+  .row.menu-left.pull-left
+    .btn-group-vertical(role='group', aria-label='')
+      a.icon.icon-primary.icon-ef-2.icon-ef-2b.hover-color(ui-sref='main.minutes.minute-detail-summary')
+        i.fa.fa-list
+      a.icon.icon-primary.icon-ef-2.icon-ef-2b.hover-color(ui-sref='main.minutes.minute-detail-content')
+        i.fa.fa-list-alt
+      a.icon.icon-success.icon-ef-2.icon-ef-2b.hover-color(ui-sref='main.minutes.minute-detail-people')
+        i.fa.fa-users
+      a.icon.icon-primary.icon-ef-2.icon-ef-2b.hover-color(ui-sref='main.minutes.minute-detail-documents')
+        i.fa.fa-file-text
+  .row.content-right
+    .col-sm-4
+      // section
+      section.tile.tile-simple
+        // tile header
+        .tile-header.dvd.dvd-btm
+          i.fa.fa-check
+          h1.custom-font
+            strong Attendees
+        // /tile header
+        // tile body
+        .tile-body
+          .media
+            .pull-left.thumb
+              img.media-object.img-circle(src='assets/images/random-avatar5.jpg', alt='')
+            .media-body
+              p.media-heading.mb-0.mt-10
+                | Roger
+                strong Federer
+              p.mb-0
+                small.text-lightred 
+                  | Manager
+              p.mb-0
+                small.text-blue
+                  | roger.federer@atp.com
+            .mt-10.pull-right
+              a.btn.btn-rounded-20.btn-sm.btn-greensea
+                | 3 done
+              a.btn.btn-rounded-20.btn-sm.btn-lightred.ml-5
+                | 1 pending
+          hr
+          .media
+            .pull-left.thumb
+              img.media-object.img-circle(src='assets/images/random-avatar4.jpg', alt='')
+            .media-body
+              p.media-heading.mb-0.mt-10
+                | Vincenz
+                strong Schwerter
+              p.mb-0
+                small.text-lightred 
+                  | Product Manager
+              p.mb-0
+                small.text-blue
+                  | vincenz.schwerter@atp.com
+            .mt-10.pull-right
+              a.btn.btn-rounded-20.btn-sm.btn-greensea
+                | 3 done
+          hr
+          .media
+            .pull-left.thumb
+              img.media-object.img-circle(src='assets/images/random-avatar6.jpg', alt='')
+            .media-body
+              p.media-heading.mb-0.mt-10
+                | Pablo
+                strong Mandujano
+              p.mb-0
+                small.text-lightred 
+                  | Software Engineer
+              p.mb-0
+                small.text-blue
+                  | pablo.mandujano@atp.com
+        // tile body
+      // /section
+    .col-sm-4
+      // section
+      section.tile.tile-simple
+        // tile header
+        .tile-header.dvd.dvd-btm
+          i.fa.fa-remove
+          h1.custom-font
+            strong Didn't make it
+        // /tile header
+        // tile body
+        .tile-body
+          .media
+            .pull-left.thumb
+              img.media-object.img-circle(src='assets/images/random-avatar8.jpg', alt='')
+            .media-body
+              p.media-heading.mb-0.mt-10
+                | Antonella
+                strong Meyer
+              p.mb-0
+                small.text-lightred 
+                  | Consultant
+              p.mb-0
+                small.text-blue
+                  | antonela.meyer@atp.com
+            .mt-10.pull-right
+              a.btn.btn-rounded-20.btn-sm.btn-greensea
+                | 3 done
+          hr
+          .media
+            .pull-left.thumb
+              img.media-object.img-circle(src='assets/images/random-avatar2.jpg', alt='')
+            .media-body
+              p.media-heading.mb-0.mt-10
+                | Ben
+                strong Larsen
+              p.mb-0
+                small.text-lightred 
+                  | Consultant
+              p.mb-0
+                small.text-blue
+                  | ben.larsen@atp.com
+              .mt-10.pull-right
+                a.btn.btn-rounded-20.btn-sm.btn-lightred.ml-5
+                  | 1 pending
+        // tile body
+      // /section

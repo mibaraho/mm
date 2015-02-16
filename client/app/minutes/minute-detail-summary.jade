@@ -1,0 +1,63 @@
+.page.page-tiles
+  .pageheader
+    h2
+      | {{page.title}} 
+      span // {{page.subtitle}}
+    .page-bar
+      ul.page-breadcrumb
+        li
+          a(ui-sref='main.dashboard')
+            i.fa.fa-home
+            |  {{main.title}}
+        li
+          a(ui-sref='main.minutes.list') {{page.title}}
+  .row.menu-left.pull-left
+    .btn-group-vertical(role='group', aria-label='')
+      a.icon.icon-success.icon-ef-2.icon-ef-2b.hover-color(ui-sref='main.minutes.minute-detail-summary')
+        i.fa.fa-list
+      a.icon.icon-primary.icon-ef-2.icon-ef-2b.hover-color(ui-sref='main.minutes.minute-detail-content')
+        i.fa.fa-list-alt
+      a.icon.icon-primary.icon-ef-2.icon-ef-2b.hover-color(ui-sref='main.minutes.minute-detail-people')
+        i.fa.fa-users
+      a.icon.icon-primary.icon-ef-2.icon-ef-2b.hover-color(ui-sref='main.minutes.minute-detail-documents')
+        i.fa.fa-file-text
+  .row.content-right
+    .col-sm-4
+      // section
+      section.tile.tile-simple
+        // tile header
+        .tile-header.dvd.dvd-btm
+          i.fa.fa-list
+          h1.custom-font
+            strong Summary
+        // /tile header
+        // tile body
+        .tile-body
+        // tile body
+      // /section
+    .col-sm-4
+      // section
+      section.tile.tile-simple
+        // tile header
+        .tile-header.dvd.dvd-btm
+          i.fa.fa-pie-chart
+          h1.custom-font
+            strong Highlights
+        // /tile header
+        // tile body
+        .tile-body
+        // tile body
+      // /section
+    .col-sm-4
+      // section
+      section.tile.tile-simple
+        // tile header
+        .tile-header.dvd.dvd-btm
+          i.fa.fa-info
+          h1.custom-font
+            strong Info
+        // /tile header
+        // tile body
+        .tile-body
+        // tile body
+      // /section

@@ -1,0 +1,13 @@
+.menu-left {
+  position: fixed;
+  top: 260px;
+}
+.content-right {
+  margin-left: 60px;
+}
+
+.btn-group-vertical > a {
+  display: block;
+  float: none;
+  max-width: 100%;
+}
