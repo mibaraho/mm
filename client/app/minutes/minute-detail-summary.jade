@@ -33,7 +33,11 @@
         // /tile header
         // tile body
         .tile-body
-        // tile body
+          .custom-font.text-strong
+            | Main topic
+          p
+            | {{mainTopic}}
+        // /tile body
       // /section
     .col-sm-4
       // section
@@ -46,6 +50,56 @@
         // /tile header
         // tile body
         .tile-body
+          .custom-font.text-strong
+            | Assignments status
+          // row
+          .row
+            // col
+            .col-md-6.text-center
+             .easypiechart(easypiechart='', options='ourTasks.options', percent='ourTasks.percent', style='width: 180px; height: 180px;')
+                span.pie-percent.custom-font(ng-bind='ourTasks.percent', style='line-height: 170px;')
+            // /col
+            // col
+            .col-md-6.text-center
+             .easypiechart(easypiechart='', options='theirTasks.options', percent='theirTasks.percent', style='width: 180px; height: 180px;')
+                span.pie-percent.custom-font(ng-bind='theirTasks.percent', style='line-height: 170px;')
+            // /col
+          .custom-font.text-strong
+            | Hints
+          .row.m-0
+            .col-sm-3.text-center.p-0.m-0
+              .card-container
+                .card
+                  .front.bg-greensea
+                    p.text-elg.text-strong.mb-0 3
+                    i.fa.fa-users.fa-2x
+                  .back.bg-greensea
+                    h2.m-0.custom-font 3 People
+            .col-sm-3.text-center.p-0.m-0
+              .card-container
+                .card
+                  .front.front.bg-lightred
+                    p.text-elg.text-strong.mb-0 2
+                    i.fa.fa-exclamation-triangle.fa-2x
+                  .back.front.bg-lightred
+                    h2.m-0.custom-font 2 Issues
+            .col-sm-3.text-center.p-0.m-0
+              .card-container
+                .card
+                  .front.front.bg-slategray
+                    p.text-elg.text-strong.mb-0 4
+                    i.fa.fa-tasks.fa-2x
+                  .back.front.bg-slategray
+                    h2.m-0.custom-font 4 Tasks
+            .col-sm-3.text-center.p-0.m-0
+              .card-container
+                .card
+                  .front.front.bg-blue
+                    p.text-elg.text-strong.mb-0 8
+                    i.fa.fa-comments.fa-2x
+                  .back.front.bg.bg-blue
+                    h4.m-0.custom-font 8 Comments
+
         // tile body
       // /section
     .col-sm-4
@@ -54,10 +108,26 @@
         // tile header
         .tile-header.dvd.dvd-btm
           i.fa.fa-info
-          h1.custom-font
+          h3.custom-font
             strong Info
         // /tile header
         // tile body
         .tile-body
+          h3.custom-font
+            i.fa.fa-map-marker
+            | Location
+          .custom-font.text-strong
+            | Address
+          p
+            | {{location}}
+          .custom-font.text-strong
+            | Description
+          p
+            | {{locationDescription}}
+          h3.custom-font
+            i.fa.fa-calendar
+            | Datetime
+          .custom-font.text-strong
+            | 2015-03-01 09:00
         // tile body
       // /section
